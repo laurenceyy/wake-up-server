@@ -3,11 +3,11 @@ const cron = require('node-cron');
 const axios = require('axios');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT||3000;
 
 // Your API endpoint
-// const apiEndpoint = 'https://api.skyskillhub.com/wake';
-const apiEndpoint = 'http://localhost:4000/wake';
+const apiEndpoint = 'https://api.skyskillhub.com/wake';
+// const apiEndpoint = 'http://localhost:4000/wake';
 
 // Define the cron schedule (every two minutes between 5am to 1am)
 cron.schedule('*/2 5-23 * * *', () => {
