@@ -26,6 +26,9 @@ async function makeApiRequest() {
   }
 }
 
+app.get('/',(req,res)=>{
+    res.json({message:"Support service awake!!"})
+})
 // Your other Express routes and configurations go here...
 
 // Start the Express server
