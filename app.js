@@ -10,7 +10,7 @@ const apiEndpoint = 'https://api.skyskillhub.com/wake';
 // const apiEndpoint = 'http://localhost:4000/wake';
 
 // Define the cron schedule (every two minutes between 5am to 1am)
-cron.schedule('*/12 5-23 * * *', () => {
+cron.schedule('*/8 5-23 * * *', () => {
   makeApiRequest();
 });
 
