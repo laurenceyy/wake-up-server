@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT||3000;
 
 // Your API endpoint
-const apiEndpoint = 'https://api.skyskillhub.com/wake';
+const apiEndpoint = 'https://wake-up-skyskill.onrender.com';
 const apiEndpoint2 = 'https://binary-bloggy.onrender.com/';
 // const apiEndpoint = 'http://localhost:4000/wake';
 
@@ -30,7 +30,7 @@ async function makeApiRequest() {
 }
 
 app.get('/',(req,res)=>{
-    res.json({message:"Support service awake!!"})
+    res.json({message:"Support service on blog awake!!"})
 })
 // Your other Express routes and configurations go here...
 
