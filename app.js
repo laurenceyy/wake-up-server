@@ -7,10 +7,11 @@ const port = process.env.PORT||3000;
 
 // Your API endpoint
 const apiEndpoint = 'https://api.skyskillhub.com/wake';
+const apiEndpoint2 = 'https://binary-bloggy.onrender.com/';
 // const apiEndpoint = 'http://localhost:4000/wake';
 
 // Define the cron schedule (every two minutes between 5am to 1am)
-cron.schedule('*/8 5-23 * * *', () => {
+cron.schedule('*/8 * * * *', () => {
   makeApiRequest();
 });
 
@@ -18,9 +19,11 @@ cron.schedule('*/8 5-23 * * *', () => {
 async function makeApiRequest() {
   try {
     const response = await axios.get(apiEndpoint);
+    const response2 = await axios.get(apiEndpoint2);
     
     // Process the API response data if needed
     console.log(response.data);
+    console.log("Response to blog",response2.status);
   } catch (error) {
     console.error('Error during API request:', error.message);
   }
